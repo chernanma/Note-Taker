@@ -13,10 +13,7 @@ let activeNote = {};
 const getNotes = () => {
   return $.ajax({
     url: "/api/notes",
-    method: "GET",
-    success: function(data){
-      console.log(data.getbody());
-    }
+    method: "GET",   
   });
 };
 
