@@ -1,18 +1,19 @@
 
 // DEPENDENCIES
-var express = require("express");
+const express = require("express");
 
 //Server configuration
 
-var app = express();
+const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-var PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3030;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static('public'));
 
 // ROUTER
 // The below points our server to a series of "route" files.

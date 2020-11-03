@@ -1,8 +1,10 @@
+
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
 const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
+
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
@@ -12,6 +14,9 @@ const getNotes = () => {
   return $.ajax({
     url: "/api/notes",
     method: "GET",
+    success: function(data){
+      console.log(data.getbody());
+    }
   });
 };
 
@@ -137,6 +142,7 @@ const renderNoteList = (notes) => {
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => {
+  console.log("I'm in");
   return getNotes().then(renderNoteList);
 };
 
