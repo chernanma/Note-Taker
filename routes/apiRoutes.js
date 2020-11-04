@@ -2,24 +2,22 @@
 
 const notesStore = require("../db/store");
 
-
 // ROUTING
 
 module.exports = function(app) {
   // API GET Requests
   
-  //Display notes
+  // Route to Display notes
 
   app.get("/api/notes",notesStore.display);
  
- // Create new Note
+ // Route to Create new Note
 
   app.post("/api/notes", notesStore.add);
 
-// Delete Note base on Id number
+// Route to Delete Note base on Id number
 
   app.delete("/api/notes/:id", notesStore.delete);
-
  
 }
 

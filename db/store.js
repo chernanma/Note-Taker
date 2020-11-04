@@ -10,7 +10,11 @@ exports.display = function(req, res) {
 
 exports.add = function(req, res) {
     const newNote = req.body;    
-    newNote["id"]=parseInt(notesData[notesData.length-1].id)+1; // Auto ID number generation 
+    if (notesData.length!==0){
+        newNote["id"]=parseInt(notesData[notesData.length-1].id)+1; // Auto ID number generation
+    }else{
+        newNote["id"]=1;
+    }     
     notesData.push(newNote); 
     writeFileAsync("./db/db.json", JSON.stringify(notesData)).then(function() {
         console.log("db.json has been updated!");
