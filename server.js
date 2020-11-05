@@ -1,7 +1,7 @@
 
 // DEPENDENCIES
 const express = require("express");
-
+// 
 //Server configuration
 
 const app = express();
@@ -21,6 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
 
 
 // LISTENER
