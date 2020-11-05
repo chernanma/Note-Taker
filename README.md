@@ -4,7 +4,7 @@ This Note-Taking application permits the user to be able to create, retrieve, an
  
 Note: Node.js application has been deployed in Heroku.
 
-[Click here to go to Live Site](https://github.com/chernanma/Note-Taker)
+[Click here to go to Live Site](https://still-sea-43312.herokuapp.com/)
 
 [Click here to go to Repository](https://github.com/chernanma/Note-Taker)
 
